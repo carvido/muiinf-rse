@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./w3.css">
+        <title>Google Drive Example App</title>
+    </head>
+    <body>
+		<div class="w3-container w3-orange">
+			<h2>Upload file to Drive</h2>
+		</div>
+		<p>This is a simple sample of an interaction with Google Drive API and OAuth 2.0. In this application, this file "example.txt" will be automatically uploaded to your Google Drive.</p>
+<?PHP
+		if(isset($uploaded) && $uploaded === "true"){
+?>
+		<div class="w3-panel w3-green">
+		  <h3>Success!</h3>
+		  <p>File successfully uploaded to your Drive storage!</p>
+		</div> 
+<?PHP
+		}else{
+?>
+		<ul>
+			<?php foreach ($files as $file) { ?>
+			<li><?php echo $file; ?></li>
+			<?php } ?>
+		</ul>
+		<form method="post" action="<?php echo $url; ?>" class="w3-container">
+			<input class="w3-btn w3-blue-grey" type="submit" value="Upload" name="submit">
+		</form>
+<?PHP
+		}
+?>
+    </body>
+</html>
+
