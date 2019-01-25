@@ -6,8 +6,8 @@ $url = $url_array[0];
 require_once 'google-api-php-client/src/Google_Client.php';
 require_once 'google-api-php-client/src/contrib/Google_DriveService.php';
 $client = new Google_Client();
-$client->setClientId('825597297322-rnr8eft83b94c3if511qtfi6s6dsrl52.apps.googleusercontent.com');
-$client->setClientSecret('HoLYbnxYZn7JeJIDRuhcuQZw');
+$client->setClientId('*****************************.apps.googleusercontent.com');
+$client->setClientSecret('*******************');
 $client->setRedirectUri("https://rse.carvido1.upv.edu.es/index.php");
 $client->setScopes(array('https://www.googleapis.com/auth/drive'));
 if (isset($_GET['code'])) {
